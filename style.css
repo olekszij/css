@@ -6,6 +6,18 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+
 #frontimg {
   position: absolute;
   z-index: -2;
@@ -47,54 +59,56 @@ li {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   color: rgb(34, 35, 35);
-  font-size: 1em;
+  font-size: 1.2em;
 
   position: relative;
-	color: #222322; 
-	cursor: pointer;
-	line-height: 1; /*задаём высоту строки*/
-	text-decoration: none; 
+  color: #000000;
+  cursor: pointer;
+  line-height: 1; /*задаём высоту строки*/
+  text-decoration: none;
 }
 
 .nav-item a:after {
-	display: block;
+  display: block;
   position: absolute;
-  left: 50%; transform: translateX(-50%); 
-	width: 0px;/*задаём длинну линии до наведения курсора*/
-	height: 2px; /*задаём ширину линии*/
-	background-color: #5d5d5d; 
-	content: "";
-  transition: width 0.5s ease-out; 
-  
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px; /*задаём длинну линии до наведения курсора*/
+  height: 2px; /*задаём ширину линии*/
+  background-color: #000000;
+  content: "";
+  transition: width 0.5s ease-out;
 }
 
-.nav-item a:hover:after,  
+.nav-item a:hover:after,
 .nav-item a:focus:after {
-	width: 80%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+  width: 80%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
+  height: 100vmin;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  
+  
 }
 
 .main {
-  width: 50%;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-top: 50px;
-  margin-right: auto;
-  margin-left: auto;
+  color: white;
+  padding: 20%;
 }
 .main h1,
-h3,
-button {
-  padding-bottom: 15px;
-
+h3 {
+  padding: 9%;
+  background-color:rgba(0, 0, 0, 0.3);;
+  font-size: 3em;
   line-height: 1.2;
 }
-.main h1 {
-  font-size: 3.5rem;
-  font-weight: 300;
+.main h3 {
+  font-size: 2em;
+  padding-bottom: 5%;
 }
 
 .main button {
@@ -114,7 +128,21 @@ button {
   color: midnightblue;
 }
 
+.main_container {
+  width: 70%;
+  padding: 10%;
+}
+
+.footer {
+  flex-shrink: 0;
+  background-color: transparent;
+}
+
 @media (max-width: 800px) {
+  header {
+    position: relative;
+  }
+
   #frontimg {
     display: none;
   }
@@ -123,16 +151,30 @@ button {
     padding-top: 20px;
     background-color: #fff;
   }
+  nav {
+    display: none;
+  }
   nav ul {
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-between;
   }
-  
-element.style {
-}
-.nav-item a {
+
+  .nav-item a {
     font-size: 2.4em;
     line-height: 1.2;
+  }
+  .container {
+    background-image: url("./img/horrible.jpg");
+    height: 812px;
+    width: 100%;
+    padding: 10%;
+  }
+
+  .main {
+    padding: 20px 5px;
+  }
+  .main_container {
+    width: 95%;
   }
 }
