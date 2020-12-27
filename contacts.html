@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CSS Landing</title>
+    <style>
+      input {
+        margin: 15px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <header id="top">
+        <a href="./index.html">
+          <img src="img/dead.svg" alt="can't sleep tonight" />
+        </a>
+
+        <a href="#wrap" id="open">
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="34px"
+            height="27px"
+            viewBox="0 0 34 27"
+            enable-background="new 0 0 34 27"
+            xml:space="preserve"
+          >
+            <rect fill="#000" width="34" height="4" />
+            <rect y="11" fill="#000" width="34" height="4" />
+            <rect y="23" fill="#000" width="34" height="4" />
+          </svg>
+        </a>
+        <a href="#" id="close">×</a>
+
+        <nav class="nav hidden">
+          <ul>
+            <li class="nav-item">
+              <a href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Prices</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Warranty</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- USE COMMENTS!!! -->
+      <div class="main_container">
+        <form>
+          <input type="radio" name="radio" id="radio1" />
+          <input type="radio" name="radio" id="radio2" />
+          <br />
+
+          <label for="user">Name</label>
+          <input minlength="3" type="text" name="name" id="user" />
+
+          <label for="email"></label>
+          <input type="email" name="email" id="email" />
+
+          <select name="product" id="product">
+            <option value="xl">XL</option>
+            <option value="l">L</option>
+            <option value="m">M</option>
+            <option value="s">S</option>
+          </select>
+
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <table class="main_container">
+        <tr>
+          <th>First Name</th> <!--  column-->
+          <th>Last Name</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Alex</td>  <!--  row-->
+          <td>Okolos</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>Alex</td>
+          <td>Okolos</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>Alex</td>
+          <td>Okolos</td>
+          <td>41</td>
+        </tr>
+      </table>
+    </div>
+    <!--Footer -->
+
+    <footer class="footer">
+      <div class="footer_container">
+        <a href="#top">
+          <img src="./img/up-arrow-svgrepo-com.svg" alt="back to top" />
+        </a>
+        <p>Back</p>
+      </div>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>

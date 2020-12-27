@@ -1,3 +1,9 @@
+:root {
+  --transition: 0.1s ease-in;
+  --box-shadow: 0 10px 15px -5px rgba(211, 211, 213, 0.2);
+  --border-radius: 6px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +14,11 @@
 
 html,
 body {
-  height: 100%;
+  background: url(./img/wallpapertip_horrible-wallpapers-hd_762951.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  background-attachment: scroll, local;
 }
 body {
   display: flex;
@@ -16,13 +26,6 @@ body {
 }
 .content {
   flex: 1 0 auto;
-}
-
-#frontimg {
-  position: absolute;
-  z-index: -2;
-  max-width: 100%;
-  height: auto;
 }
 
 header {
@@ -34,19 +37,16 @@ header {
   position: sticky;
   top: 0;
   z-index: 1020;
+  background-color: rgb(255 255 255 / 0%);
 }
 
-.nav_logo {
-  max-width: 33%;
-}
 header img {
   height: 40px;
   vertical-align: middle;
   border-style: none;
 }
 
-#open,
-#close {
+#open {
   display: none;
 }
 
@@ -91,50 +91,50 @@ li {
 }
 
 .container {
-  max-width: 100%;
-  height: 100vmin;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  max-width: 100%;
+  height: 100vh;
 }
 
 .main {
-  color: white;
-  padding: 20%;
-}
-.main h1,
-.main h3 {
-  padding: 9%;
-  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+  align-items: baseline;
+  color: #fff;
 
-  font-size: 3em;
-  line-height: 1.2;
+}
+.main h1 {
+  font-size: 3rem;
 }
 .main h3 {
-  font-size: 2em;
-  padding-bottom: 5%;
+  font-size: 2rem;
 }
 
 .main button {
-  background-color: #020202;
-  border-radius: 8px;
-  border: 1px solid #151615;
-  display: inline-block;
+  outline: none;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: rgb(251, 251, 251);
+  color: rgb(22, 10, 10);
+  border: none;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  color: #ffffff;
-  font-size: 17px;
-  padding: 16px 31px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #636363;
+  padding: 6px 12px;
+  transition: var(--transition);
 }
-.myButton:hover {
-  background-color: #0d0e0d;
-  color: midnightblue;
+.main button:hover {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  box-shadow: var(--box-shadow);
 }
 
 .main_container {
-  width: 70%;
-  padding: 15%;
+  position: relative;
 }
 
 .footer {
@@ -154,12 +154,12 @@ li {
 /* Responsive Version */
 
 @media (max-width: 800px) {
-  header {
-    position: relative;
+  body {
+    background-image: url(./img/horrible.jpg);
   }
 
-  #frontimg {
-    display: none;
+  header {
+    position: relative;
   }
 
   #open {
@@ -190,7 +190,6 @@ li {
     font-weight: bold;
   }
   .container {
-    background-image: url("./img/horrible.jpg");
     height: 812px;
     width: 100%;
     padding: 10%;
