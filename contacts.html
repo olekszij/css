@@ -42,75 +42,70 @@
         <nav class="nav hidden">
           <ul>
             <li class="nav-item">
-              <a href="/index.html">Home</a>
+              <a href="./">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#">Projects</a>
+              <a href="./">Projects</a>
             </li>
             <li class="nav-item">
-              <a href="#">Services</a>
+              <a href="./">Services</a>
             </li>
             <li class="nav-item">
-              <a href="#">Prices</a>
+              <a href="./index.html">Prices</a>
             </li>
             <li class="nav-item">
-              <a href="#">Warranty</a>
+              <a href="./index.html">Warranty</a>
             </li>
             <li class="nav-item">
-              <a href="#">Team</a>
+              <a href="./index.html">Team</a>
             </li>
             <li class="nav-item">
-              <a href="/contacts.html">Contacts</a>
+              <a href="./contacts.html">Contacts</a>
             </li>
           </ul>
         </nav>
       </header>
       <!-- USE COMMENTS!!! -->
-      <div class="main_container">
-        <form>
-          <input type="radio" name="radio" id="radio1" />
-          <input type="radio" name="radio" id="radio2" />
-          <br />
+      <div class="big_box">
+        <div class="main_container">
+          <div class="selection">
+            <form class="selection">
+            
+          
+  
+              <label for="user">Name</label>
+              <input minlength="3" type="text" name="name" id="user" />
+  
+              <label for="email"></label>
+              <input type="email" name="email" id="email" />
+  
+              <select name="product" id="product">
+                <option value="xl">XL</option>
+                <option value="l">L</option>
+                <option value="m">M</option>
+                <option value="s">S</option>
+              </select>
+              <br>
+  
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="50"
+              ></textarea>
+              <br>
+              <button type="submit">Submit</button>
+              <input type="button" onclick="location.href='https://sensuniqueparis.com';" value="Go to Sens Unique"/>
 
-          <label for="user">Name</label>
-          <input minlength="3" type="text" name="name" id="user" />
+            </form>
+          </div>
+          
+        </div>
 
-          <label for="email"></label>
-          <input type="email" name="email" id="email" />
 
-          <select name="product" id="product">
-            <option value="xl">XL</option>
-            <option value="l">L</option>
-            <option value="m">M</option>
-            <option value="s">S</option>
-          </select>
 
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <button type="submit">Submit</button>
-        </form>
+      
       </div>
-      <table class="main_container">
-        <tr>
-          <th>First Name</th> <!--  column-->
-          <th>Last Name</th>
-          <th>Age</th>
-        </tr>
-        <tr>
-          <td>Alex</td>  <!--  row-->
-          <td>Okolos</td>
-          <td>41</td>
-        </tr>
-        <tr>
-          <td>Alex</td>
-          <td>Okolos</td>
-          <td>41</td>
-        </tr>
-        <tr>
-          <td>Alex</td>
-          <td>Okolos</td>
-          <td>41</td>
-        </tr>
-      </table>
     </div>
     <!--Footer -->
 

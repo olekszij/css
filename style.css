@@ -1,6 +1,6 @@
 :root {
   --transition: 0.1s ease-in;
-  --box-shadow: 0 10px 15px -5px rgba(211, 211, 213, 0.2);
+  --box-shadow: 6px 8px 6px rgb(89, 89, 89);
   --border-radius: 6px;
 }
 
@@ -105,16 +105,24 @@ li {
   padding-bottom: 100px;
   align-items: baseline;
   color: #fff;
-
 }
 .main h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+  line-height: 3.2rem;
 }
 .main h3 {
   font-size: 2rem;
+  line-height: 3.2rem;
 }
 
-.main button {
+a.btn {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+
   outline: none;
   height: 40px;
   font-size: 1.2rem;
@@ -127,15 +135,34 @@ li {
   padding: 6px 12px;
   transition: var(--transition);
 }
-.main button:hover {
+a.btn:hover {
   margin-top: -5px;
   margin-bottom: 5px;
   box-shadow: var(--box-shadow);
 }
+/* MAIN CONTAINER */
 
 .main_container {
-  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
 }
+.selection {
+    border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img_section {
+  width: 100px;
+}
+
+/* FOOOTER*/
 
 .footer {
   flex-shrink: 0;
@@ -196,11 +223,11 @@ li {
   }
 
   .main {
-    padding: 20px 5px;
+    padding: 40px 5px;
   }
   .main_container {
     width: 95%;
-    padding: 5%;
+    padding-left: 5%;
   }
   .main_container h3 {
     font-size: 2em;
@@ -216,4 +243,25 @@ li {
   footer .nav-item a {
     font-size: 2.2em;
   }
+}
+
+
+
+/* CONTACT PAGE */
+
+.big_box {
+  background: white;
+  width: 100%;
+  height: 1200px
+
+}
+.big_box .selection {
+  padding-top: 20px;
+}
+.selection input, 
+.selection select,
+.selection textarea {
+  height: 40px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
